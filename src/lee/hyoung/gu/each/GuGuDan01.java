@@ -1,0 +1,16 @@
+package lee.hyoung.gu.each;
+
+public class GuGuDan01 {
+
+	public static void main(String[] args) {
+		int i = 0;
+
+		for(i=2; i<10; i++) {
+			for(int j = 1; j<10; j++) {
+				System.out.println(i +"*" + j + "=" + i*j);
+			}
+			System.out.println("____________________");
+		}
+	}
+
+}
