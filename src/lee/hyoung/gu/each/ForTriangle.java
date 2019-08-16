@@ -3,7 +3,6 @@ package lee.hyoung.gu.each;
 public class ForTriangle {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int i=0;
 		final int horizon = 7;
 		for(i=0; i<4; i++) {
@@ -24,7 +23,7 @@ public class ForTriangle {
 		1~5 = 7/2-2 + 7/2+1
 		0~6 = 7/2-3 + 7/2+3
 		*/
-		
+		/*
 		for(i=2; i>=0; i--) {
 			for(int j=0;j<horizon;j++) {
 				if(horizon/2-i <= j && horizon/2+i >= j) {
@@ -35,6 +34,7 @@ public class ForTriangle {
 			}
 			System.out.println();
 		}
+		*/
 		/*
 		3~3 = 7/2
 		2~4 = 7/2-1 + 7/2+1
@@ -44,7 +44,7 @@ public class ForTriangle {
 		2~4 = 7/2-1 + 7/2+1
 		3~3 = 7/2 
 		 */
-		
+		/*
 		for(i=0; i<horizon; i++) {
 			int start;
 			int end;
@@ -64,7 +64,7 @@ public class ForTriangle {
 			}
 			System.out.println();
 		}
-		
+		*/
 		/*
 		 7 ? 4 = 1  
 		 7 ? 5 = 2

@@ -7,7 +7,7 @@ public class Gugudan03 {
 		int i = 2, j = 1;
 		
 		for(;i<10;i++) {
-			System.out.println(i+" step");
+			// System.out.println(i+" step");
 			for(j = 1;j<10;j++) {
 				if(j <= i) {
 					// System.out.println(i +"*" + j + "=" + i*j);

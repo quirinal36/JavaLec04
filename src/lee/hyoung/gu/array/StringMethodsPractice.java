@@ -1,4 +1,4 @@
-package lee.hyoung.gu.each;
+package lee.hyoung.gu.array;
 
 import java.util.Scanner;
 
