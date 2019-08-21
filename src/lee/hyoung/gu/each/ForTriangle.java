@@ -5,12 +5,16 @@ public class ForTriangle {
 	public static void main(String[] args) {
 		int i=0;
 		final int horizon = 7;
-		for(i=0; i<4; i++) {
+		for(i=0; i<horizon; i++) {
 			for(int j=0;j<horizon;j++) {
-				if(horizon/2-i <= j && horizon/2+i >= j) {
-					System.out.print("*");
+				if(i<4) {
+					if(horizon/2-i <= j && horizon/2+i >= j) {
+						System.out.print("*");
+					}else {
+						System.out.print(" ");
+					}
 				}else {
-					System.out.print(" ");
+					
 				}
 			}
 			System.out.println();
