@@ -4,10 +4,15 @@ import java.util.Arrays;
 
 public class ArraySort {
 
+	/**
+	 * 버블정렬
+	 * 
+	 * @param input
+	 */
 	public void bubbleSort(int [] input) {
 		int length = input.length;
 		for(int i=0; i<length; i++) {
-			System.out.println(Arrays.toString(input));
+			// System.out.println(Arrays.toString(input));
 			for(int j=0; j<length-1; j++) {
 				if(input[j] > input[j+1]) {
 					int temp = input[j];
@@ -18,6 +23,11 @@ public class ArraySort {
 		}
 	}
 	
+	/**
+	 * 삽입정렬
+	 * 
+	 * @param input
+	 */
 	public void insertionSort(int [] input) {
 		int length = input.length;
 		for(int i=0; i<length-1; i++) {
