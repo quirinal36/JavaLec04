@@ -30,7 +30,7 @@ public class MethodPractice {
 	 * @return
 	 */
 	public int method03(int x) {
-		int y = 2*x + x*x;
+		int y = 2*x + (int)Math.pow(x, 2);
 		return y;
 	}
 	
@@ -58,6 +58,12 @@ public class MethodPractice {
 		}
 	}
 	
+	/**
+	 * 구구단 x 단부터 y 단까지 출력하는 메소드
+	 * 
+	 * @param x
+	 * @param y
+	 */
 	public void method06(final int x, final int y) {
 		for(int i = x; i<=y; i++) {
 			for(int j = 1; j<10; j++) {
