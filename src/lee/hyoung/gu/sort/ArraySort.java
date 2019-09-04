@@ -10,16 +10,19 @@ public class ArraySort {
 	 * @param input
 	 */
 	public void bubbleSort(int [] input) {
-		/*********************************
-		 * 		이곳이 과제 영역입니다.		*
-		 * 								*
-		 *********************************/
+		int length = input.length;
+		for(int i=0; i<length; i++) {
+			System.out.println(Arrays.toString(input));
+			for(int j=0; j<length-1; j++) {
+				if(input[j] > input[j+1]) {
+					int temp = input[j];
+					input[j] = input[j+1];
+					input[j+1] = temp;
+				}
+			}
+		}
 	}
 	
-	/**
-	 * 버블정렬 한줄
-	 * @param input
-	 */
 	public void bubbleOneLine(int[] input) {
 		int length = input.length;
 		for(int i=0; i<length-1; i++) {

@@ -1,23 +1,34 @@
 package lee.hyoung.gu.each;
 
-public class ForTriangle {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-	public static void main(String[] args) {
+public class ForTriangle {
+	
+	public void pyramid(final int horizon) {
 		int i=0;
-		final int horizon = 7;
 		for(i=0; i<horizon; i++) {
-			for(int j=0;j<horizon;j++) {
-				if(i<4) {
-					if(horizon/2-i <= j && horizon/2+i >= j) {
-						System.out.print("*");
-					}else {
-						System.out.print(" ");
-					}
-				}else {
-					
+			int until = horizon*2;
+			for(int j=0;j<until;j++) {
+				if(until/2-i <= j && until/2+i >= j) {
+					System.out.print("*");
+				}else if(j>0){
+					System.out.print(" ");
 				}
 			}
 			System.out.println();
+		}
+	}
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		try {
+			String input = br.readLine();
+			ForTriangle triangle = new ForTriangle();
+			triangle.pyramid(Integer.parseInt(input));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 		
