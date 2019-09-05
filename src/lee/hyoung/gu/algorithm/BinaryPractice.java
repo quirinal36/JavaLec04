@@ -1,5 +1,11 @@
 package lee.hyoung.gu.algorithm;
 
+/**
+ * 10진수를 2진수로 변경하기
+ * 
+ * @author 이형구
+ * @since 2019.09.05
+ */
 public class BinaryPractice {
 	
 	public void parseBinary(int decimalNum){

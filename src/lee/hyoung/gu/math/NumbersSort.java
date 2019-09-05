@@ -31,10 +31,10 @@ public class NumbersSort {
 	private List<Integer> sort(List<Integer>input, boolean isDesc){
 		Collections.sort(input, new Comparator<Integer>() {
 			@Override
-			public int compare(Integer o1, Integer o2) {
-				if(o1 > o2) {
+			public int compare(Integer num1, Integer num2) {
+				if(num1 > num2) {
 					return isDesc?1:-1;
-				}else if(o1 < o2) {
+				}else if(num1 < num2) {
 					return isDesc?-1:1;
 				}else {
 					return 0;
