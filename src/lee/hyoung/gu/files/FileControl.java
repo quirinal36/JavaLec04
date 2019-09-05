@@ -12,23 +12,23 @@ import java.util.logging.Logger;
 import org.json.JSONObject;
 
 public class FileControl {
-	static final Logger logger = Logger.getLogger(FileControl.class.getSimpleName());
+//	static final Logger logger = Logger.getLogger(FileControl.class.getSimpleName());
 	
 	public static void main(String[] args) {
-		final String fileTitle = "myjson.json";
+		final String fileTitle = "myjson.txt";
 		
 		FileControl fileControl = new FileControl();
 		fileControl.writeFile(fileTitle, "파일내용");
 		
-		logger.info(fileControl.readFile(fileTitle));
+		System.out.println(fileControl.readFile(fileTitle));
 		
 		JSONObject updateJson = new JSONObject();
 		final String nowDate = LocalDateTime.now().toString();
 		updateJson.put("update", nowDate);
 		fileControl.appendFile(fileTitle, updateJson.toString());
 		
-		logger.info(fileControl.readFile(fileTitle));
-		fileControl.deleteFile(fileTitle);
+		System.out.println(fileControl.readFile(fileTitle));
+		// fileControl.deleteFile(fileTitle);
 	}
 	
 	/**
@@ -54,7 +54,8 @@ public class FileControl {
 	 */
 	public void appendFile(String title, String content) {
 		File storedFile = new File(title);
-		try(BufferedWriter writer = new BufferedWriter(new FileWriter(storedFile, true))){
+		try(BufferedWriter writer = new BufferedWriter(
+				new FileWriter(storedFile, true))){
 			writer.append(content);
 		}catch(IOException e) {
 			e.printStackTrace();
@@ -71,7 +72,8 @@ public class FileControl {
 		StringBuilder result = new StringBuilder();
 		File storedFile = new File(title);
 		
-		try(BufferedReader reader = new BufferedReader(new FileReader(storedFile))){
+		try(BufferedReader reader = new BufferedReader(
+				new FileReader(storedFile))){
 			String line;
 			while((line = reader.readLine()) != null) {
 				result.append(line);
@@ -91,10 +93,10 @@ public class FileControl {
 	public void writeFile(String title, String content) {
 		File newFile = new File(title);
 		
-		try (BufferedWriter writer = new BufferedWriter(new FileWriter(newFile))){
+		try (BufferedWriter writer = 
+				new BufferedWriter(new FileWriter(newFile))){
 			writer.write(content);
-			
-			logger.info(newFile.getAbsolutePath());
+			System.out.println(newFile.getAbsolutePath());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
