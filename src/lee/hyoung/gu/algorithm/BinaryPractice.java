@@ -7,7 +7,23 @@ package lee.hyoung.gu.algorithm;
  * @since 2019.09.05
  */
 public class BinaryPractice {
-	
+	public void parseDecimal(String binaryStr) {
+		String binaries[] = binaryStr.split("");
+		int binary[] = new int [binaries.length];
+		for(int i=0; i<binaries.length; i++) {
+			binary[i] = Integer.parseInt(binaries[i]);
+		}
+		int position = binary.length-1;
+		int decimal = 0;
+		int opnd = 1;
+		for(; position>=0; position--){
+			decimal += binary[position] * opnd;
+			System.out.printf("%d +", binary[position]*opnd);
+			opnd*=2;
+		}
+		
+		System.out.println("= " + decimal);
+	}
 	public void parseBinary(int decimalNum){
 		System.out.println("입력된 숫자 : " + decimalNum);
 		int position = 0;

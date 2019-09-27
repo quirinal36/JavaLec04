@@ -11,7 +11,7 @@ public class User {
 	String email;
 	String address;
 	String username;
-	
+
 	public boolean signIn(User user) {
 		System.out.println("로그인 했습니다.");
 		return true;
